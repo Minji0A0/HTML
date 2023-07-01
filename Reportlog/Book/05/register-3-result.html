@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{list-style: none;}
+    
+    </style>
+
+</head>
+
+<body>
+    <form>
+    <div>
+        <h1>회원 가입을 환영합니다</h1>
+    </div>
+    <div>
+        <fieldset>
+            <legend>사용자 정보</legend>
+            <li>
+                <label for="uid" value="uid">아이디</label>
+                <input type="text" autofocus placeholder="4자 ~ 10자 사이, 공백없이" required>
+            </li>
+            <li>
+                <label for="email">이메일</label>
+                <input type="email">
+            </li>
+            <li>
+                <label for="password" value="password">비밀번호</label>
+                <input type="password" placeholder="문자와 숫자, 특수 기호 포함" required>
+            </li>
+            <li>
+                <label for="password2">비밀번호 확인</label>
+                <input type="password" required>
+            </li>
+            <li> <label for="path">가입 경로</label>
+                <select id="path">
+                    <option value="blog">블로그</option>
+                    <option value="search">검색</option>
+                    <option value="sns">SNS</option>
+                    <option value="etc">기타</option>
+                </select>
+            </li>
+            <li><label for="memo" value="memo">메모</label>
+                <textarea id="textarea" cols="40" rows="4" placeholder="남길 말씀이 있다면 여기에"></textarea>
+
+            </label></li>
+        </fieldset>
+    </div>
+    <div>
+        <fieldset>
+            <legend>이벤트와 새로운 소식</legend>
+            <input type="radio" name="mailing" checked>메일 수신
+            <input type="radio" name="mailing"> 메일 수신 안 함
+        </fieldset>
+    </div>
+    <div>
+        <input type="submit" value="가입하기">
+        <input type="button" value="취소">
+    </div>
+</form>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            border: 5pix solid color gray;
+            width: 400px;
+        }
+
+        div {
+            font-weight: bold;
+        }
+
+        .value {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <fieldset>
+            <legend>납품자정보</legend>
+            <ol>
+                <p>
+                    <li>납품자명 : <input type="text" value="name"></li>
+                </p>
+                <p>
+                    <li>email : <input type="email" value="answs@naver.com"></li>
+                </p>
+                <p>
+                    <li>홈페이지: <input type="url" value="http://"></li>
+                </p>
+            </ol>
+        </fieldset>
+    </div>
+    <div id="id1">
+        <fieldset>
+            <legend>납품정보</legend>
+            <ul>
+                <p>
+                    <li>상품명 : <input type="text"></li>
+                </p>
+                <p>
+                    <li>납품수량 : <input type="number" min="10" step="10" max="100" value="최소 10이상"></li>
+                </p>
+                <p>
+                    <li>납품등급 : <input type="range" min="0" max="10"></li>
+                </p>
+            </ul>
+        </fieldset>
+    </div>
+    <div id="id2">
+        <fieldset>
+            <legend>납품정보</legend>
+            <ul>
+                <p>
+                    <li>상품명 : <select>
+                            <option value="dog1004" label="도그1004"></option>
+                            <option value="catchicken" label="고양이치킨"></option>
+                            <option value="milk" label="우유"></option>
+                        </select></li>
+                </p>
+                <p>
+                    <li>납품수량 : <input type="number" min="10" step="10" max="100" value="최소 10이상"></li>
+                </p>
+                <p>
+                    <li>납품등급 : <input type="range" min="0" max="10"></li>
+                </p>
+            </ul>
+        </fieldset>
+    </div>
+</body>
+
+</html>

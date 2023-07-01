@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI디자인_3_HTML_실습</title>
+    <style>
+        fieldset{width: 500px; height: 300px;}
+        #b{text-align: left; color: gray;}
+        p{font-weight: bold;}
+        td{border: 1px solid; width: 500px; height: 100px;}
+        button{margin-top: 10px;}
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <div>
+            <p>회원여부 :
+                <input type="radio" name="join" value="join"><label>회원</label>
+                <input type="radio" name="join" value="join"><label>비회원</label>
+            </p>
+        </div>
+        <div>
+            <p>취미(중복선택) :
+                <input type="checkbox" name="hobby" value="hobby"><label>독서</label>
+                <input type="checkbox" name="hobby" value="hobby"><label>영화</label>
+                <input type="checkbox" name="hobby" value="hobby"><label>음악</label>
+                <input type="checkbox" name="hobby" value="hobby"><label>스포츠</label>
+            </p>
+        </div>
+        <div>
+            <p>직업 :
+                <select>
+                    <option value="job">학생</option>
+                    <option value="job">회사원</option>
+                    <option value="job">교사</option>
+                    <option value="job">자영업</option>
+                    <option value="job">기타</option>
+                </select>
+            </p>
+        </div>
+        <div>
+            <p>남기고 싶은 말 : </p>
+            <table>
+                <tr>
+                    <td id="b" colspan="5" rowspan="70">150자 내외로 글을 남겨주세요.</td>
+                </tr>
+            </table>
+            <button>초기화</button> <button>전송</button>
+        </div>
+    </fieldset>
+</body>
+</html>
