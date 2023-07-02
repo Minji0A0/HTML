@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{border: 1px solid #ccc; width: 600px; height: 100px;}
+        ul{list-style: none; }
+        .aa{float: left;; padding: 20px;text-decoration: none; }
+        a[title|=us] {background: url(images/us.png) no-repeat left center;}
+        a[title|=ja] {background: url(images/jp.png) no-repeat left center;}
+        a[title|=chn] {background: url(images/ch.png) no-repeat left center;}
+
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <ul><a class="aa"> 외국어 서비스 : </a>
+                <li><a class="aa" href="#" title="us-english">영어</a></li>
+                <li><a class="aa" href="#" title="ja">일본어</a></li>
+                <li><a class="aa" href="#" title="chn">중국어</a></li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{border: 1px solid #ccc; width: 800px; height: 80px;}
+        ul{list-style: none;}
+        li{font-weight: bold;width: 120px ; display: inline-block; margin: 10px;}
+        li a{text-decoration: none;}
+        .flat{background: pink;}
+        .button{background: hotpink;}
+        a[href]{text-align: justify; border: 1px solid #ccc; ; color: rgb(255, 170, 0); text-align: center; padding: 5px 20px; }
+        [class ~= button] {box-shadow: rgba(0, 0, 0, 0.4) 4px 4px; border-radius: 5px;}
+    </style>
+</head>
+<body>
+    <root>
+        <div>
+            <main>
+                <ul><li id="a"><a>메인 메뉴 : </a></li>
+                    <li id="b"><a href="#" class="flat">메뉴1</a></li>
+                    <li id="b"><a href="#" class="flat">메뉴2</a></li>
+                    <li id="b"><a href="#" class="button">메뉴3</a></li>
+                    <li id="b"><a href="#" class="flat button">메뉴4</a></li>
+                </ul>
+            </main>
+        </div>
+    </root>
+    
+</body>
+</html>
