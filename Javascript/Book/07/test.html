@@ -1,0 +1,35 @@
+<!-- 비밀번호 -->
+<div class="form-group">
+    <label for="user_pw">비밀번호</label>
+        <input type="password" class="form-control" id="user_pw" name="user_pw" placeholder="PASSWORD" required>
+    <div class="check_font" id="pw_check"></div>
+</div>
+<!-- 비밀번호 재확인 -->
+<div class="form-group">
+    <label for="user_pw2">비밀번호 확인</label>
+        <input type="password" class="form-control" id="user_pw2" name="user_pw2" placeholder="Confirm Password" required>
+    <div class="check_font" id="pw2_check"></div>
+</div>
+<!-- 이름 -->
+<div class="form-group">
+    <label for="user_name">이름</label>
+        <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Name" value="${param.nickname}" required>
+    <div class="check_font" id="name_check"></div>
+</div>
+<!-- 생년월일 -->
+<div class="form-group required">
+    <label for="user_birth">생년월일</label>
+        <input type="text" class="form-control" id="user_birth" name="user_birth" placeholder="ex) 19990415" required>
+    <div class="check_font" id="birth_check"></div>
+</div>
+
+// 이름에 특수문자 들어가지 않도록 설정
+	$("#user_name").blur(function() {
+		if (nameJ.test($(this).val())) {
+				console.log(nameJ.test($(this).val()));
+				$("#name_check").text('');
+		} else {
+			$('#name_check').text('이름을 확인해주세요');
+			$('#name_check').css('color', 'red');
+		}
+	});

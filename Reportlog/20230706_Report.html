@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="css.css"> -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+    <script>
+        window.onload = function(){
+            $("#mid1").blur(function(){
+                console.log($("#mid1").val())
+                if($("#mid1").val() == ""){
+                    $("#pain1").css("visibility","visible")
+                } else {
+                    $("#pain1").css("visibility","hidden")
+                }
+                ;})
+            $("#mpw1").blur(function(){
+                console.log($("#mpw1").val())
+                if($("#mpw1").val() == ""){
+                    $("#pain2").css("visibility","visible")
+                } else {
+                    $("#pain2").css("visibility","hidden")
+                }
+                ;})
+            $("#mpw2").blur(function(){
+                console.log($("#mpw2").val())
+                if($("#mpw2").val() == ""){
+                    $("#pain3").css("visibility","visible")
+                } else {
+                    $("#pain3").css("visibility","hidden")
+                }
+                ;})
+        $("#mid1").focus(function(){
+            $("#pain1").css("visibility","hidden");
+        });
+        $("#mpw1").focus(function(){
+            $("#pain2").css("visibility","hidden");
+        });
+        $("#mpw2").focus(function(){
+            $("#pain3").css("visibility","hidden");
+        });
+        }
+    </script>
+
+
+    <style>
+        body {
+            background: rgb(255, 234, 237);
+            margin: 80px;
+        }
+
+        fieldset {
+            width: 400px;
+            padding: 80px 10px 20px 10px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            background: #f2efef;
+        }
+
+        th {
+            text-align: left;
+            padding: 0 20px 0 0;
+        }
+
+        sub {
+            color: #9d9d9d;
+            font-size: 6pt;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="address"] {
+            border: none;
+            border-bottom: 2px dashed black;
+            width: 240px;
+            height: 30px;
+            background: #f2efef;
+        }
+
+        input[type="email"] {
+            border: none;
+            border-bottom: 2px dashed black;
+            width: 110px;
+            height: 30px;
+            background: #f2efef;
+        }
+
+        input[type="submit"],
+        button[onblur] {
+            padding: 10px 175px 10px 175px;
+            margin: 50px 0px auto;
+            border: none;
+            background: pink;
+            color: hotpink;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .hidden {visibility: hidden;}
+    </style>
+</head>
+
+<body>
+    <root>
+        <div>
+            <form action="#">
+                <fieldset>
+                    <table>
+                        <tr>
+                            <th>아이디</th>
+                            <td colspan="2" class="mid"><input type="text" name="mbo" id="mid1">
+                            </td>
+                        </tr>
+                        <tr class="pain">
+                            <td></td>
+                            <td class="hidden"><sub id="pain1">필수 입력 항목입니다.</sub></td>
+                        </tr>
+                        <tr>
+                            <th>패스워드</th>
+                            <td colspan="2" class="mpw"><input type="password" name="mbo2" id="mpw1"></td>
+                        </tr>
+                        <tr class="pain">
+                            <td class="hidden"></td>
+                            <td class="hidden"><sub id="pain2">영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자<br>필수 입력 항목입니다.</sub></td>
+                        </tr>
+                        <tr>
+                            <th>패스워드 확인</th>
+                            <td colspan="2" class="mpw"><input type="password" name="mbo3" id="mpw2"></td>
+                        </tr>
+                        <tr class="pain">
+                            <td class="hidden"></td>
+                            <td class="hidden"><sub id="pain3">필수 입력 항목입니다.</sub></td>
+                        </tr>
+                        <tr>
+                            <th>이메일</th>
+                            <td class="mmail"><input type="email" name="mbo4">@<input type="email" id="mmail"></td>
+                        </tr>
+                        <tr>
+                            <th>주소</th>
+                            <td class="mad"><input type="address" name="mbo5"><br>
+                                <input type="address" id="bo">
+                            </td>
+                        </tr>
+                    </table>
+                    <span class="error-message" style="display: none;">모든 필드를 입력하세요.</span>
+                    <button onblur="btn1()" class="btn">가 입</button>
+                </fieldset>
+
+            </form>
+
+        </div>
+
+    </root>
+</body>
+
+
+
+</html>
